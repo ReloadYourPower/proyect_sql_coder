@@ -1,7 +1,7 @@
 -- Desactivo el autocomitt
 SELECT @@autocommit;
 SET AUTOCOMMIT = 0;
--- agrego a la tabla clientes un lote de clientes y agrego un savepoint
+-- agrego a la tabla clientes un lote de clientes y agrego un savepoint--- Trabajo de la primer tabla-----
 -- Establecer el punto de guardado inicial
 SAVEPOINT inicio;
 
@@ -45,7 +45,7 @@ SELECT * FROM clients;
  -- ROLLBACK TO mitad;
  -- COMMIT;
  
- -- iNICIO UNA TRANSACCION EN LA SEGUNDA TABLA
+ -- iNICIO UNA TRANSACCION EN LA SEGUNDA TABLA----- Trabajo segunda Tabla
  -- Establecer el punto de guardado inicial
 SAVEPOINT inicio2;
 
