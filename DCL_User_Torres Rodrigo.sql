@@ -53,3 +53,20 @@ DROP USER 'user121'@'localhost';
 
 use mysql;
 SHOW GRANTS FOR 'newnameuser12'@'localhost';
+
+-- ------------------------------------------------------------------Tarea solicitada en entrega DCL ---------------------------------------------------------------------------------------------------
+
+-- CREO AL USUARIO QUE SOLO TIENE PERMISO DE LECTURA -------
+CREATE USER 'user43'@'localhost' IDENTIFIED BY '45asr64r';
+-- entrego el permiso de  lectura -------------
+GRANT SELECT ON proyect_schema.* TO 'user43'@'localhost';
+
+-- CREO AL USUARIO QUE SOLAMENTE TIENE PERMISO DE LECTURA Y MODIFICACION DE DATOS ------- 
+CREATE USER 'user23'@'localhost' IDENTIFIED BY 'ASR4455E2';
+-- entrego los permisos de lectura(Select) , de insercion (insert) y modificacion(update)
+GRANT SELECT, UPDATE, INSERT ON proyect_schema.* TO 'user23'@'localhost';
+
+
+
+use mysql;
+SHOW GRANTS FOR 'newnameuser12'@'localhost';
